@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	sessionName = "jereyji"
+	sessionName = "AB020"
 )
 
 var (
@@ -79,7 +79,7 @@ func (s *server) handleSessionsCreate() http.HandlerFunc {
 		Email string `json:"email"`
 		Password string `json:"password"`
 	}
-	
+
 	return func(w http.ResponseWriter, r *http.Request) {
 		req := &request{}
 		if err := json.NewDecoder(r.Body).Decode(req); err != nil {
